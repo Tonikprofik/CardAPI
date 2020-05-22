@@ -9,7 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using CardAPI.Model;
+using CardAPI.Models;
+using CardAPI.Data;
 
 namespace CardAPI
 {
@@ -37,6 +38,8 @@ namespace CardAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            CardData.Initialize(app);
 
             app.UseRouting();
 

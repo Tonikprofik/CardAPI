@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CardAPI
+namespace CardAPI.Models
 {
     public class Card
     {
         [Key]
         public int CardID { get; set; }
-        public string Name { get; set; }
+        public string ImageRef { get; set; }
         public string Text { get; set; }
         public int Military1 { get; set; }
         public int Military2 { get; set; }
